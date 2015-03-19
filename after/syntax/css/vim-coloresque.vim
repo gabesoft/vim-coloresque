@@ -122,9 +122,6 @@ function! s:VimCssInit(update)
     if a:update==1
         call s:ClearMatches()
     endif
-    :set isk+=-
-    :set isk+=#
-    :set isk+=.
 
     if len(keys(b:color_pattern))>0
         call s:RestoreColors()
@@ -133,7 +130,7 @@ function! s:VimCssInit(update)
 
     "let b:matchescache = {}
 
-    call s:AdditionalColors()
+    "call s:AdditionalColors()
 
     "for i in range(1, line("$"))
         call s:PreviewCSSColor(join(getline(1,'$'), "\n"))
